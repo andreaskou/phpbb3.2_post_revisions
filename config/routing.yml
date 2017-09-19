@@ -1,0 +1,9 @@
+bruninoit_ppr_controller:
+    path: /ppr/view/{post_id}
+    defaults: { _controller: bruninoit.ppr.controller:view }
+bruninoit_pprdelete_controller:
+    path: /ppr/delete/{revision_id}
+    defaults: { _controller: bruninoit.ppr.controller:delete }
+bruninoit_pprrestore_controller:
+    path: /ppr/restore/{revision_id}
+    defaults: { _controller: bruninoit.ppr.controller:restore }

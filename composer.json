@@ -1,0 +1,31 @@
+{
+"name": "bruninoit/ppr",
+"type": "phpbb-extension",
+"description": "It saves all versions of post, when they are being edited.",
+"homepage": "https://github.com/bruninoit/ppr",
+"version": "0.1.0-RC1",
+"time": "2016-01-24",
+"license": "GPL-2.0",
+"authors": [
+{
+"name": "BruninoIt",
+"email": "brunino@altervista.org",
+"homepage": "http://www.phpbbrevolution.6te.net",
+"role": "Developer"
+}
+],
+"require": {
+"php": ">=5.3"
+},
+"extra": {
+"display-name": "Prime Post Revision",
+"soft-require": {
+"phpbb/phpbb": "3.1.*@dev"
+},
+"version-check": {
+"host": "phpbbrevolution.6te.net",
+"directory": "/download/",
+"filename": "version.php/ppr"
+}
+}
+}

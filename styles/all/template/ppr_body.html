@@ -1,0 +1,76 @@
+<!-- INCLUDE overall_header.html -->
+<h2>{TOPIC_TITLE}</h2> 
+
+                <!-- BEGIN ppr_list -->
+	<div id="p{ppr_list.POST_ID}" class="post has-profile <!-- IF ppr_list.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+
+		<div class="inner">
+		<dl class="postprofile" id="profile{ppr_list.POST_ID}">
+
+			<dt class="<!-- IF postrow.RANK_TITLE or postrow.RANK_IMG -->has-profile-rank<!-- ELSE -->no-profile-rank<!-- ENDIF --> <!-- IF postrow.POSTER_AVATAR -->has-avatar<!-- ELSE -->no-avatar<!-- ENDIF -->">
+
+			<strong {ppr_list.USERNAME_COLOUR}>{ppr_list.USERNAME}</strong>
+
+			</dt>
+
+		</dl>
+
+
+		<div class="postbody">
+
+			<div id="post_content{ppr_list.POST_ID}">
+
+			<h3 <!-- IF ppr_list.S_FIRST_ROW -->class="first"<!-- ENDIF -->><a href="#p{ppr_list.POST_ID}">{ppr_list.POST_SUBJECT}</a></h3>
+
+
+
+<!-- da cambiare -->
+				<ul class="post-buttons">
+					<!-- IF ppr_list.U_RESTORE -->
+						<li>
+							<a href="{ppr_list.U_RESTORE}" title="{L_RESTORE_POST}" class="button icon-button ppr-icon"><span>{L_RESTORE_POST}</span></a>
+						</li>
+					<!-- ENDIF -->
+					<!-- IF ppr_list.U_DELETE -->
+						<li>
+							<a href="{ppr_list.U_DELETE}" title="{L_DELETE_POST}" class="button icon-button delete-icon"><span>{L_DELETE_POST}</span></a>
+						</li>
+					<!-- ENDIF -->
+
+
+			</ul>	
+
+
+			<p class="author"><span class="responsive-hide">{L_POST_BY_AUTHOR} <strong>{ppr_list.USERNAME}</strong> &raquo; </span>{ppr_list.DATE} </p>
+
+
+			<div class="content">{ppr_list.POST_TEXT}</div>
+
+
+				</dl>
+	
+
+					<!-- IF ppr_list.EDIT_REASON -->
+				<div class="notice">
+					
+					<strong>{L_REASON}{L_COLON}</strong> <em>{ppr_list.EDIT_REASON}</em>
+				</div>
+			<!-- ENDIF -->
+
+			</div>
+		</div>
+
+
+		</div>
+	</div>
+
+
+	<hr class="divider" />
+<!-- END ppr_list -->
+
+
+
+
+
+<div class="copyright" style="text-align:center; margin-top: 10px;">{L_EXTENSION_BY}{L_COLON} <a href="http://brunino.altervista.org">BruninoIt</a></div>
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,25 @@
+imports:
+    - { resource: tables.yml }
+services:
+    bruninoit.ppr.controller:
+        class: bruninoit\ppr\controller\main
+        arguments:
+            - @template
+            - @dbal.conn
+            - %bruninoit.ppr.tables.ppr%
+            - @auth
+            - @user
+            - @controller.helper
+    bruninoit.ppr.listener:
+        class: bruninoit\ppr\event\main_listener
+        arguments:
+            - @controller.helper
+            - @template
+            - @dbal.conn
+            - @user
+            - %core.root_path%
+            - %core.php_ext%
+            - %bruninoit.ppr.tables.ppr%
+            - @auth
+        tags:
+            - { name: event.listener }

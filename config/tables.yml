@@ -1,0 +1,2 @@
+parameters:
+    bruninoit.ppr.tables.ppr: %core.table_prefix%ppr
