@@ -15,10 +15,10 @@ class release_0_1_0_b2 extends \phpbb\db\migration\migration
 	{
 		return array(
 			'\phpbb\db\migration\data\v310\gold',
-			'\bruinoit\ppr\migration\release_0_1_0',
+			'\bruinoit\ppr\migrations\release_0_1_0',
 		);
 	}
-	
+
 	public function update_schema()
 	{
 return array(

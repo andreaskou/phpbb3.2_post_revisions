@@ -13,7 +13,7 @@ class release_0_1_0_perm extends \phpbb\db\migration\migration
 	{
 		return array(
 			'\phpbb\db\migration\data\v310\gold',
-			'\bruinoit\ppr\migration\release_0_1_0',
+			'\bruinoit\ppr\migrations\release_0_1_0',
 		);
 	}
 	public function update_data()
